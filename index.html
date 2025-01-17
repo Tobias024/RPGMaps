@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Mapas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="app.js"></script>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: 'Cinzel', serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-800 p-4 flex justify-between items-center">
+    <h1 class="text-2xl text-gold-400 font-bold">Tienda de Mapas</h1>
+    <ul class="flex space-x-4">
+      <li><a href="./carrito.html" class="hover:text-gold-400">Carrito</a></li>
+      <li><a href="#" class="hover:text-gold-400">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="text-center py-16 bg-gray-800">
+    <h2 class="text-4xl font-bold text-gold-400">Explora Mundos</h2>
+    <p class="text-lg mt-4 text-gray-300">Mapas únicos para tus aventuras de rol.</p>
+    <a href="#catalogo" class="mt-6 inline-block px-6 py-3 bg-red-600 text-white rounded hover:bg-red-700">
+      Ver Catálogo
+    </a>
+  </header>
+
+  <!-- Catálogo -->
+  <section class="py-12 px-4">
+    <h2 class="text-3xl font-bold text-center mb-8" id="catalogo">Catálogo</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Producto -->
+      <div class="bg-gray-800 p-4 rounded shadow-lg">
+        <img src="IMG/regino.jpeg" alt="Mapa 1" class="w-full rounded">
+        <h3 class="text-xl font-bold mt-4 text-gold-400">Mapas de Regiones</h3>
+        <p class="text-gray-300 mt-2">Perfectos para aventuras con varios sectores.</p>
+        <div class="mt-4 flex justify-between items-center">
+          <span class="text-lg text-gold-400 font-bold">$1000</span>
+          <button class="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700">
+            Agregar
+          </button>
+        </div>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow-lg">
+        <img src="IMG/ForestEncampment_digital_day_grid.jpg" alt="Mapa 1" class="w-full rounded">
+        <h3 class="text-xl font-bold mt-4 text-gold-400">Mapas locales</h3>
+        <p class="text-gray-300 mt-2">Listos para cada situacion de tu seción.</p>
+        <div class="mt-4 flex justify-between items-center">
+          <button class="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700">
+            Ver más
+          </button>
+        </div>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow-lg">
+        <img src="IMG/Imagen de WhatsApp 2025-01-15 a las 10.46.45_7d628f5a.jpg" alt="Mapa 1" class="w-full rounded">
+        <h3 class="text-xl font-bold mt-4 text-gold-400">Mapas a pedido</h3>
+        <p class="text-gray-300 mt-2">Pedinos un mapa que se ajuste a tu historia.</p>
+        <div class="mt-4 flex justify-between items-center">
+          <button class="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700">
+            Contactanos
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-center p-4">
+    <p class="text-gray-400">© 2025 Tienda de Mapas. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

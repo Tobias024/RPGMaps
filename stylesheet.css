@@ -1,0 +1,101 @@
+/* General */
+body {
+    background-color: #1A202C; /* Gris oscuro */
+    color: #F7FAFC; /* Texto claro */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Cinzel', serif;
+    color: #D69E2E; /* Dorado */
+  }
+  
+  a {
+    text-decoration: none;
+    color: #D69E2E;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #E53E3E; /* Rojo oscuro */
+  }
+  
+  /* Navbar */
+  nav {
+    background-color: #2D3748; /* Gris más oscuro */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  nav li {
+    margin: 0 1rem;
+  }
+  
+  /* Botones */
+  button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Hero Section */
+  header {
+    background-image: src=('IMG\download.jpeg'); /* Imagen temática */
+    background-size: cover;
+    background-position: center;
+    color: #F7FAFC; /* Texto claro */
+    text-align: center;
+  }
+  
+  header h2 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Catálogo */
+  section {
+    padding: 2rem;
+  }
+  
+  .card {
+    background-color: #2D3748; /* Fondo de las tarjetas */
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card h3 {
+    margin-top: 1rem;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #2D3748;
+    color: #A0AEC0; /* Gris claro */
+    font-size: 0.9rem;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  

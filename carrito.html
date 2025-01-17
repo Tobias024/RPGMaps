@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-800 p-4 flex justify-between items-center">
+    <h1 class="text-2xl text-gold-400 font-bold">Tienda de Mapas</h1>
+    <ul class="flex space-x-4">
+      <li><a href="index.html" class="hover:text-gold-400">Inicio</a></li>
+      <li><a href="carrito.html" class="hover:text-gold-400">Carrito</a></li>
+    </ul>
+  </nav>
+
+  <!-- Carrito -->
+  <section class="py-12 px-4">
+    <h2 class="text-3xl font-bold text-center mb-8">Tu Carrito</h2>
+    <div id="lista-carrito" class="grid grid-cols-1 gap-8">
+      <!-- Los productos del carrito se mostrarán aquí -->
+    </div>
+    <div class="text-center mt-8">
+      <button id="comprar-btn" class="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700">
+        Proceder a la compra
+      </button>
+    </div>
+  </section>
+
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    const listaCarrito = document.getElementById("lista-carrito");
+    const botonComprar = document.getElementById("comprar-btn");
+
+    if (carrito.length === 0) {
+      listaCarrito.innerHTML = "<p class='text-center text-gray-300'>Tu carrito está vacío.</p>";
+      botonComprar.disabled = true;
+      botonComprar.classList.add("opacity-50", "cursor-not-allowed");
+      return;
+    }
+
+    carrito.forEach((producto) => {
+      const item = document.createElement("div");
+      item.classList.add("bg-gray-800", "p-4", "rounded", "shadow-lg", "flex", "justify-between", "items-center");
+      item.innerHTML = `
+        <span>${producto.nombre}</span>
+        <span class="text-gold-400">$${producto.precio}</span>
+      `;
+      listaCarrito.appendChild(item);
+    });
+
+    // Evento del botón "Proceder a la compra"
+    botonComprar.addEventListener("click", () => {
+      alert("¡Gracias por tu compra!");
+      localStorage.removeItem("carrito"); // Vacía el carrito
+      location.href = "index.html"; // Redirige a la página principal
+    });
+  });
+</script>
+</html>
